@@ -8,7 +8,7 @@ Tureng Temelli Çalışan Online Türkçe-İngilizce Chrome Eklentisi
 
 * **Seçili Metin Araması:** Web sayfasındaki herhangi bir kelimeyi farenizle seçin ve `Alt + V` (Windows ve Mac için) kısayolu ile eklentiyi çalıştırın. Lugat otomatik olarak açılacak, seçili olan kelimeyi veya söz öbeğini Tureng Sözlük içinde aratacaktır.
 * **Standart Arama:** Eklenti çalıştırıldığında otomatik olarak arama kutucuğu seçili bir biçimde açılır. Ayrıca arama kutucuğuna tıklamanız gerekmez.
-* **Seri Arama:** Bir çeviri yapmanızdan sonra arama kutucuğundaki kelime seçili hale gelir. Ard arda yapılacak çeviriler için arama kutucuğunu tekrar tekrar seçmeniz gerekmez.
+* **Seri Arama:** Bir çeviri yapmanızdan sonra arama kutucuğundaki kelime seçili hale gelir. Art arda yapılacak çeviriler için arama kutucuğunu tekrar tekrar seçmeniz gerekmez.
 
 ## Kurulum
 

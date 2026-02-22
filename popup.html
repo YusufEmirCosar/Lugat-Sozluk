@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <style>
-    /* Base styles */
+
     body {
       width: 450px;
       margin: 0;
@@ -13,10 +13,9 @@
       color: #333;
     }
 
-    /* Header & Search Bar */
     h3 {
       margin: 0 0 10px 0;
-      color: rgb(53, 53, 53); /* Changed from red to charcoal */
+      color: rgb(53, 53, 53);
       text-align: center;
     }
     .search-container {
@@ -38,11 +37,11 @@
       outline: none;
     }
     input:focus { 
-      border-color: rgb(53, 53, 53); /* Changes the glow when typing */
+      border-color: rgb(53, 53, 53);
     }
     button {
       padding: 8px 12px;
-      background-color: rgb(53, 53, 53); /* Changes the button color */
+      background-color: rgb(53, 53, 53);
       color: white;
       border: none;
       border-radius: 6px;
@@ -50,7 +49,7 @@
       font-weight: bold;
     }
     button:hover { 
-      background-color: rgb(30, 30, 30); /* A slightly darker gray for the hover effect */
+      background-color: rgb(30, 30, 30);
     }
 
     /* Results Area */
@@ -66,7 +65,7 @@
     .section-header {
       background: #e9ecef;
       color: #444;
-      padding: 8px 12px; /* Increased padding slightly here too */
+      padding: 8px 12px;
       font-weight: bold;
       font-size: 12px;
       text-transform: uppercase;
@@ -77,10 +76,9 @@
     /* CSS Grid for the Table Rows */
     .trans-row {
       display: grid;
-      /* 4 Columns: Number, Category, Input Word, Translated Word */
-      grid-template-columns: 20px 100px 1fr 1.2fr; /* Gave the number column slightly more width */
+      grid-template-columns: 20px 100px 1fr 1.2fr;
       gap: 10px;
-      padding: 12px 12px; /* INCREASED ROW SPACING HERE */
+      padding: 12px 12px;
       align-items: center;
       border-bottom: 1px solid #f0f0f0;
       font-size: 12px;
@@ -105,7 +103,7 @@
       font-weight: bold;
       border-bottom: none;
     }
-    /* THIS FIXES THE VISIBILITY ISSUE */
+    
     .header-row .col-num, .header-row .col-type { color: #aaa; }
     .header-row .col-tr, .header-row .col-en { color: white; }
 

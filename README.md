@@ -16,5 +16,5 @@ Tureng Temelli Çalışan Online Türkçe-İngilizce Chrome Eklentisi
 2. Google Chrome'u (veya Chrome temelli tarayıcınızı) açın ve arama yerine `chrome://extensions/` yazın.
 3. **Developer Mode** seçeneğini aktif hale getirin.
 4. **Load unpacked** butonuna tıklayın.
-5. Bu repository'nin olduğu klasörü seçin (`manifest.json`, `popup.html`, vb. dosyalar olmalı).
+5. Bu repository'nin olduğu klasörü seçin.
 6. Daha kolay erişim için eklentiyi araç çubuğuna sabitleyin.

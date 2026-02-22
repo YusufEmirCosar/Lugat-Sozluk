@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    /* Base styles */
+    body {
+      width: 450px;
+      margin: 0;
+      padding: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    /* Header & Search Bar */
+    h3 {
+      margin: 0 0 10px 0;
+      color: rgb(53, 53, 53); /* Changed from red to charcoal */
+      text-align: center;
+    }
+    .search-container {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background-color: #f4f6f8;
+      padding-bottom: 5px;
+    }
+    input {
+      flex-grow: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+    }
+    input:focus { 
+      border-color: rgb(53, 53, 53); /* Changes the glow when typing */
+    }
+    button {
+      padding: 8px 12px;
+      background-color: rgb(53, 53, 53); /* Changes the button color */
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover { 
+      background-color: rgb(30, 30, 30); /* A slightly darker gray for the hover effect */
+    }
+
+    /* Results Area */
+    #result {
+      max-height: 450px;
+      overflow-y: auto;
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    /* Section Headings (Meanings / Phrases) */
+    .section-header {
+      background: #e9ecef;
+      color: #444;
+      padding: 8px 12px; /* Increased padding slightly here too */
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #eee;
+    }
+
+    /* CSS Grid for the Table Rows */
+    .trans-row {
+      display: grid;
+      /* 4 Columns: Number, Category, Input Word, Translated Word */
+      grid-template-columns: 20px 100px 1fr 1.2fr; /* Gave the number column slightly more width */
+      gap: 10px;
+      padding: 12px 12px; /* INCREASED ROW SPACING HERE */
+      align-items: center;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 12px;
+    }
+    
+    /* Zebra striping for easy reading */
+    .trans-row:nth-child(even) { background-color: #fafafa; }
+    .trans-row:hover { background-color: #f1f5f9; }
+
+    /* Column Typography */
+    .col-num { color: #999; font-size: 10px; font-weight: bold; }
+    .col-type { color: #555; font-size: 10px; font-weight: 600; }
+    .col-tr { color: #111; font-weight: 500; }
+    .col-en { color: #111; font-weight: 500; }
+    .word-type { color: #888; font-style: italic; font-size: 11px; margin-left: 4px; }
+
+    /* Custom Header Row Style */
+    .header-row {
+      background: #333 !important;
+      color: white;
+      border-radius: 6px 6px 0 0;
+      font-weight: bold;
+      border-bottom: none;
+    }
+    /* THIS FIXES THE VISIBILITY ISSUE */
+    .header-row .col-num, .header-row .col-type { color: #aaa; }
+    .header-row .col-tr, .header-row .col-en { color: white; }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h3>Online Dictionary</h3>
+  <div class="search-container">
+    <input type="text" id="wordInput" placeholder="Search for a word..." autocomplete="off" autofocus>
+    <button id="searchBtn">Search</button>
+  </div>
+  <div id="result"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -31,7 +31,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
     
     if (!word) return;
     
-    resultDiv.innerHTML = "<div style='text-align:center; padding: 20px; color:#666;'>Searching...</div>";
+    resultDiv.innerHTML = "<div style='text-align:center; padding: 20px; color:#666;'>Aranıyor...</div>";
     
     try {
         const targetUrl = `https://tureng.com/en/turkish-english/${encodeURIComponent(word)}`;
@@ -137,7 +137,7 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
         if (translations.length > 0) { 
             resultDiv.innerHTML = translations.join('');
         } else {
-            resultDiv.innerHTML = "<div style='text-align:center; padding: 20px; color:#666;'>Translation not found. Check your spelling!</div>";
+            resultDiv.innerHTML = "<div style='text-align:center; padding: 20px; color:#666;'>Kelime bulunamadı</div>";
         }
         
     } catch (error) {

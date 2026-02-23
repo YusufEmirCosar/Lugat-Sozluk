@@ -114,16 +114,17 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
                         translatedWord = translatedWord.replace(wordType, '').trim();
                     }
 
+                    // Build the Table Row HTML
                     let rowHTML = `
                         <div class="trans-row">
                             <div class="col-num">${orderText}</div>
                             <div class="col-type">${type}</div>
                             <div class="col-tr">
-                                ${inputWord}
+                                <span class="clickable-word">${inputWord}</span>
                                 <span class="word-type">${inputWordType ? '(' + inputWordType + ')' : ''}</span>
                             </div>
                             <div class="col-en">
-                                ${translatedWord} 
+                                <span class="clickable-word">${translatedWord}</span> 
                                 <span class="word-type">${wordType ? '(' + wordType + ')' : ''}</span>
                             </div>
                         </div>
@@ -150,6 +151,23 @@ document.getElementById('searchBtn').addEventListener('click', async () => {
 
 document.getElementById('wordInput').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
+        document.getElementById('searchBtn').click();
+    }
+});
+
+// Listen for clicks on any translated word
+document.getElementById('result').addEventListener('click', function (e) {
+    // Check if the thing we clicked has the 'clickable-word' class
+    if (e.target && e.target.classList.contains('clickable-word')) {
+        
+        // Grab the text of the word we clicked
+        const newWord = e.target.innerText.trim();
+        
+        // Drop it into the input box
+        const inputElement = document.getElementById('wordInput');
+        inputElement.value = newWord;
+        
+        // Automatically click the search button
         document.getElementById('searchBtn').click();
     }
 });

@@ -110,6 +110,17 @@
     /* Scrollbar styling */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+
+    /* Clickable Word Styling */
+    .clickable-word {
+      cursor: pointer;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color 0.15s ease-in-out;
+    }
+    .clickable-word:hover {
+      text-decoration-color: rgb(53, 53, 53); /* Matches your dark charcoal theme */
+    }
   </style>
 </head>
 <body>
